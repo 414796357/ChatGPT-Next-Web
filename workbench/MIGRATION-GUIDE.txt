@@ -1,0 +1,26 @@
+投监工作台 · 迁移指南
+====================
+
+1. 解压 / 拷贝
+   把整个 workbench 目录放到任意位置。
+
+2. 启动
+   方式一：双击 start-workbench.command / start-workbench.bat
+   方式二：
+       python3 serve.py 5175
+       python3 breach_proxy.py 5199
+   浏览器打开 http://127.0.0.1:5175/index.html
+
+3. 运行依赖
+   - Python 3（标准库即可）
+   - 邮件 / 托管行取数依赖公司内网 + IMAP，本包默认用快照演示
+   - 上传底稿的表格预览可选安装 openpyxl
+
+4. 改配置（只改配置，不动代码）
+   - 复制 config.example.json 为 config.local.json 后填写邮箱
+   - 复制 ia_cred.example.json 为 ia_cred.local.json 后填写聚升账号
+   - 改完重启 5199 代理
+
+5. 安全
+   config.local.json 与 ia_cred.local.json 含真实凭据，
+   仅限本人机器间拷贝，禁止提交公共仓库或发到聊天。

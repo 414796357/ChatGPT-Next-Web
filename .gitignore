@@ -39,5 +39,9 @@ dev
 .vscode
 .idea
 
+# 投监工作台本地凭据，禁止入库
+workbench/config.local.json
+workbench/ia_cred.local.json
+
 # docker-compose env files
 .env

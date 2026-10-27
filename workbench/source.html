@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>来源系统演示</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="source-body">
+    <div class="source-top">
+      <strong id="sys-name">来源系统</strong>
+      <span>演示页 · 非正式系统</span>
+    </div>
+    <div class="source-panel" id="panel"></div>
+    <script>
+      const sys = new URLSearchParams(location.search).get("sys") || "km";
+      const pages = {
+        km: {
+          name: "KM 签报",
+          html: `<h2>待会签</h2>
+            <table class="source-table">
+              <tr><th>编号</th><th>标题</th><th>状态</th></tr>
+              <tr><td>KM-2026-118</td><td>限制池调整会签</td><td>待投监意见</td></tr>
+              <tr><td>KM-2026-121</td><td>专户流动性例外说明</td><td>流转中</td></tr>
+            </table>`
+        },
+        risk: {
+          name: "风控 / 限制池",
+          html: `<h2>限制池摘录</h2>
+            <table class="source-table">
+              <tr><th>证券</th><th>类型</th><th>生效</th></tr>
+              <tr><td>示例证券 A</td><td>限制买入</td><td>2026-10-20</td></tr>
+              <tr><td>示例证券 B</td><td>限制卖出</td><td>2026-10-21</td></tr>
+            </table>`
+        },
+        supervise: {
+          name: "聚升",
+          html: `<h2>监督报表</h2>
+            <p>现金占比、年金流动性从工作台「聚升监控」查看快照。</p>
+            <p>正式地址请填到系统映射，不要把账号写进页面。</p>`
+        },
+        mail: {
+          name: "Coremail",
+          html: `<h2>托管行来信</h2>
+            <table class="source-table">
+              <tr><th>发件人</th><th>主题</th><th>时间</th></tr>
+              <tr><td>托管行估值</td><td>估值核对 2026-10-21</td><td>08:12</td></tr>
+              <tr><td>托管行清算</td><td>在途交易确认</td><td>09:40</td></tr>
+            </table>`
+        }
+      };
+      const page = pages[sys] || pages.km;
+      document.getElementById("sys-name").textContent = page.name;
+      document.getElementById("panel").innerHTML = page.html;
+      document.title = page.name + " · 演示";
+    </script>
+  </body>
+</html>

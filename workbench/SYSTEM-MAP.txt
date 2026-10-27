@@ -1,0 +1,26 @@
+投监工作台 · 填进 SYS 用
+========================
+
+首页：
+  http://127.0.0.1:5175/#/home
+
+主页「一键跳转」四个按钮：
+
+  K  KM 签报
+      系统：KM
+      演示：http://127.0.0.1:5175/source.html?sys=km
+
+  风  风控 / 限制池
+      系统：风控 / 限制池
+      演示：http://127.0.0.1:5175/source.html?sys=risk
+
+  聚  聚升
+      系统：聚升
+      演示：http://127.0.0.1:5175/source.html?sys=supervise
+
+  C  Coremail
+      系统：Coremail
+      演示：http://127.0.0.1:5175/source.html?sys=mail
+
+把 SYS 里填你们内网正式地址即可，四个系统按上表对应。
+企微不在这一排，只在待办「企微协助」里登记。

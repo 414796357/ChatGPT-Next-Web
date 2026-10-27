@@ -1,0 +1,8 @@
+{
+  "imap_server": "mail.cmfchina.com",
+  "imap_port": 993,
+  "mail_user": "你的邮箱@cmfchina.com",
+  "mail_pass": "在此填写邮箱密码",
+  "folder": "&YpWNRHbRd2Nj0Hk6IBSXWQ-",
+  "default_year": 2026
+}
